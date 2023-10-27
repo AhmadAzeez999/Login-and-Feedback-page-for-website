@@ -1,15 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 /* Reset some default styles */
 body, h1, p {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Header styles */
 header {
-    background-color: #0074d9;
+    background-color: #fff;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
+    font-weight: bold;
+    color: black;
+    padding-left: 10px;
 }
 
 header nav {
@@ -22,28 +28,38 @@ header nav {
     font-size: 24px;
 }
 
-nav ul {
+nav ul 
+{
     list-style: none;
     display: flex;
 }
 
-nav li {
+nav li 
+{
     margin-right: 20px;
 }
 
-nav a {
+nav a 
+{
     text-decoration: none;
-    color: #fff;
+    color: black;
 }
 
 /* Hero section styles */
-.hero {
-    background-image: url('hero-image.jpg'); /* Add your hero image path */
+.hero 
+{
+    background-image: url('Images/WomanOnlineShopping.jpg'); /* Add your hero image path */
     background-size: cover;
     background-position: center;
     text-align: center;
     padding: 100px 0;
     color: #fff;
+    background-color: black;
+}
+
+.hero img
+{
+    opacity: 0.2;
 }
 
 h1 {
@@ -72,7 +88,7 @@ p {
 /* Footer styles */
 footer {
     text-align: center;
-    background-color: #333;
+    background-color: #880808;
     color: #fff;
     padding: 10px 0;
 }
