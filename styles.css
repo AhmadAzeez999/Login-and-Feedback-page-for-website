@@ -55,20 +55,28 @@ nav a:hover
 .hero 
 {
     position: relative; /* Set position to relative for pseudo-element positioning */
-    background-image: url('Images/WomanOnlineShopping.jpg'); /* Add your hero image path */
+    background-image: url('Images/OnlineShoppingImage.jpg'); /* Add your hero image path */
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 100px 0;
+    padding: 100px;
     color: #fff;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 64px;
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 32px;
 }
 
 p {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .cta-button, .learn-more-button {
@@ -85,6 +93,62 @@ p {
 .cta-button:hover, .learn-more-button:hover {
     background-color: #880808;
     color: white;
+}
+
+.highlights
+{
+    max-width: 1000px;
+    height: 700px;
+    margin: auto;
+}
+
+.carousel
+{
+    height: 500px;
+}
+
+.custom-slide 
+{
+    background-color: #880808;
+    color: #fff;
+    /* Add other custom styles as needed */
+}
+
+.custom-slide img
+{
+    max-width: 1000px;
+    margin: auto;
+}
+
+.aboutUsSection
+{
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutUsSection img
+{
+    max-width: 500px;
+    margin: auto;
+}
+
+.aboutUsSection p
+{
+    font-size: 18px;
+}
+
+.testimonialSection
+{
+    max-width: 1000px;
+    margin: auto;
+}
+
+.testimonialSection img
+{
+    max-width: 1000px;
 }
 
 /* Footer styles */
