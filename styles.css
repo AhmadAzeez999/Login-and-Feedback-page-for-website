@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /* Reset some default styles */
-body, h1, p {
+body, h1, p 
+{
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    background-image: url("Images/Parallax\ background\ 2.png");
+
 }
 
 /* Header styles */
-header {
+header 
+{
     background-color: #fff;
     color: #fff;
     text-align: center;
