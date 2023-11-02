@@ -8,8 +8,8 @@ $(document).ready(function()
         /* Add other carousel settings as needed */
 
         // Remove default navigation buttons
-        prevArrow: null,
-        nextArrow: null,
+        prevArrow: '.custom-prev',
+        nextArrow: '.custom-next',
     });
 
     // Add event listeners to custom navigation buttons

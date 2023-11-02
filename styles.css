@@ -98,20 +98,29 @@ p {
 .highlights
 {
     max-width: 1000px;
-    height: 700px;
+    height: auto;
     margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding: 0px 10px 0px 10px;
+}
+
+.carousel-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .carousel
 {
-    height: 500px;
+   width: 800px;
+   margin: auto;
 }
 
 .custom-slide 
 {
-    background-color: #880808;
     color: #fff;
-    /* Add other custom styles as needed */
 }
 
 .custom-slide img
@@ -120,6 +129,15 @@ p {
     margin: auto;
 }
 
+/* Style for the custom previous button */
+.custom-prev, .custom-next 
+{
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+}
+
+
 .aboutUsSection
 {
     max-width: 1000px;
@@ -127,6 +145,8 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 50px;
+    padding: 0px 10px 0px 10px;
 }
 
 .aboutUsSection img
@@ -144,6 +164,8 @@ p {
 {
     max-width: 1000px;
     margin: auto;
+    padding-bottom: 50px;
+    padding: 0px 10px 0px 10px;
 }
 
 .testimonialSection img
