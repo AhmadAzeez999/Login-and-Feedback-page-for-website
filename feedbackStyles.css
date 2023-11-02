@@ -1,5 +1,6 @@
 /* Global styles */
-body {
+body 
+{
     font-family: Arial, sans-serif;
     background-color: #f1f1f1;
     margin: 0;
@@ -11,7 +12,8 @@ body {
 }
 
 /* Modal styles */
-.modal {
+.modal 
+{
     display: none;
     position: fixed;
     top: 0;
@@ -23,7 +25,8 @@ body {
     align-items: center;
 }
 
-.feedback-container {
+.feedback-container 
+{
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
@@ -32,22 +35,26 @@ body {
     text-align: center;
 }
 
-.feedback-container h2 {
+.feedback-container h2 
+{
     margin-bottom: 20px;
 }
 
-.form-group {
+.form-group 
+{
     margin-bottom: 20px;
 }
 
-.form-group label {
+.form-group label 
+{
     display: block;
     text-align: left;
     margin-bottom: 5px;
 }
 
 input[type="text"],
-input[type="email"] {
+input[type="email"] 
+{
     width: 90%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -55,7 +62,8 @@ input[type="email"] {
     font-size: 16px;
 }
 
-.form-group textarea {
+.form-group textarea 
+{
     width: 92%;
     padding: 5px;
     border: 1px solid #ccc;
@@ -63,8 +71,9 @@ input[type="email"] {
     resize: none;
 }
 
-.form-group button[type="submit"] {
-    background-color: #ff2600;
+.form-group button[type="submit"] 
+{
+    background-color: #880808;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -72,6 +81,7 @@ input[type="email"] {
     cursor: pointer;
 }
 
-.form-group button[type="submit"]:hover {
-    background-color: #ff7474;
+.form-group button[type="submit"]:hover 
+{
+    background-color: #880808;
 }
