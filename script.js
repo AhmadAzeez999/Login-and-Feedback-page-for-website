@@ -1,6 +1,7 @@
 $(document).ready(function()
 {
-    $('.carousel').slick({
+    $('.carousel').slick(
+    {
         slidesToShow: 1, /* Adjust the number of slides to display at once */
         slidesToScroll: 1,
         autoplay: true, /* Enable autoplay if desired */
@@ -13,11 +14,13 @@ $(document).ready(function()
     });
 
     // Add event listeners to custom navigation buttons
-    $('.custom-prev').on('click', function(){
+    $('.custom-prev').on('click', function()
+    {
         $('.carousel').slick('slickPrev');
     });
 
-    $('.custom-next').on('click', function(){
+    $('.custom-next').on('click', function()
+    {
         $('.carousel').slick('slickNext');
     });
 });

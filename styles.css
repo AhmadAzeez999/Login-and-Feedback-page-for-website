@@ -71,19 +71,23 @@ nav a:hover
     align-items: center;
 }
 
-.hero h1 {
+.hero h1 
+{
     font-size: 64px;
 }
 
-h1 {
+h1 
+{
     font-size: 32px;
 }
 
-p {
-    font-size: 24px;
+p 
+{
+    font-size: 14px;
 }
 
-.cta-button, .learn-more-button {
+.cta-button
+{
     display: inline-block;
     background-color: #fff;
     color: black;
@@ -94,9 +98,29 @@ p {
     transition: background-color 0.3s;
 }
 
-.cta-button:hover, .learn-more-button:hover {
+.cta-button:hover
+{
     background-color: #880808;
     color: white;
+    cursor: pointer;
+}
+
+.other-button
+{
+    background-color: #880808;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.other-button:hover
+{
+    background-color: #000000;
+    cursor: pointer;
 }
 
 .highlights
@@ -145,11 +169,13 @@ p {
 .aboutUsSection
 {
     max-width: 1000px;
+    height: auto;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 50px;
     padding: 0px 10px 0px 10px;
 }
 
@@ -157,11 +183,6 @@ p {
 {
     max-width: 500px;
     margin: auto;
-}
-
-.aboutUsSection p
-{
-    font-size: 18px;
 }
 
 .testimonialSection
@@ -178,7 +199,8 @@ p {
 }
 
 /* Footer styles */
-footer {
+footer 
+{
     text-align: center;
     background-color: #880808;
     color: #fff;
