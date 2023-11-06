@@ -1,22 +1,21 @@
-body 
-{
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
     margin: 0;
     padding: 0;
-    background-color: #f1f1f1;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
 }
 
-h1 
-{
+h1 {
     font-size: 24px;
 }
 
-.title
-{
+.title {
     text-align: center;
     color: #fff;
-    background-color:#880808;
-    padding: 10px 10px;
+    background-color: #880808;
+    padding: 10px;
 }
 
 .main {
@@ -25,62 +24,49 @@ h1
     padding: 20px;
 }
 
-.product-grid {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.product {
-    width: 48%;
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-    background-color: #fff;
-}
-
-.product img {
-    width: 500px;
-    height: auto;
-    margin: 0 auto 10px;
-}
-
-.product h3 {
-    font-size: 18px;
-    margin: 0;
-}
-
-.product p {
-    margin: 5px 0;
-}
-
 .selection {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-label {
+.selection label {
     margin-right: 10px;
 }
 
-#component {
+.selection select {
     padding: 5px;
     border: 1px solid #ddd;
     border-radius: 3px;
 }
 
-#addButton {
-    background-color: #880808;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
+.product-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-#addButton:hover {
-    background-color: #ff0000;
+.product-column {
+    width: 48%;
+    border: 1px solid #fff;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.product-column h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.product-column p {
+    margin: 5px 0;
+}
+
+.product-column img {
+    width: 500px;
+    height: auto;
+    margin: 0 auto 10px;
 }
 
 .comparison table {
