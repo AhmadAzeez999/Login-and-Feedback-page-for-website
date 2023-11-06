@@ -83,8 +83,6 @@ p
     max-width: 1000px;
     height: auto;
     margin: auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
     padding: 0px 10px 0px 10px;
 }
 
@@ -97,7 +95,7 @@ p
 
 .carousel
 {
-   width: 800px;
+   width: 900px;
    margin: auto;
 }
 
@@ -108,13 +106,15 @@ p
 
 .custom-slide img
 {
-    max-width: 1000px;
+    max-width: 900px;
+    object-fit: fill;
     margin: auto;
 }
 
 /* Style for the custom previous button */
 .custom-prev, .custom-next 
 {
+    padding-left: 0px;
     cursor: pointer;
     border: none;
     background-color: #fff;
