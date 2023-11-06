@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="finderStyles.css">
+    <link rel="stylesheet" href="headerStyle.css">
+    <title>Tech Product Finder</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    techinEZ
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="finder.html">Use tech finder</a></li>
+                <li><a href="#">Compare tech</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <input type="text" id="productInput" placeholder="Enter the name of the product">
+        <button id="doneButton">Done</button>
+        <div class="category" id="category1">
+            <!-- Category 1 content goes here -->
+            <input type="text" id="productInput" placeholder="Enter the colour">
+            <button id="doneButton">Done</button>
+        </div>
+        <div class="category" id="category2">
+            <!-- Category 2 content goes here -->
+        </div>
+        <div class="category" id="category3">
+            <!-- Category 3 content goes here -->
+        </div>
+        <!-- Add more categories as needed -->
+        <div id="results" style="display: none;">
+            <p>Here are the results!</p>
+            <!-- Display the results here -->
+        </div>
+    </div>
+    <script src="finderScript.js"></script>
+</body>
+</html>
