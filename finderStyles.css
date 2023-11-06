@@ -24,7 +24,53 @@ button {
     cursor: pointer;
 }
 
+/* Style the disabled button */
+button:disabled {
+    opacity: 0.6;
+    background-color: #ccc;
+    color: #888;
+    cursor: not-allowed;
+}
+
+/* Disable user interactions for the button */
+button:disabled {
+    pointer-events: none;
+}
+
 .category {
     display: none;
     margin-top: 30px;
 }
+
+.firstCategory
+{
+    display: block;
+}
+
+.result-line {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.result-line img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-info h3 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.product-info p {
+    margin: 5px 0;
+}
+

@@ -1,0 +1,113 @@
+body 
+{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+
+h1 
+{
+    font-size: 24px;
+}
+
+.title
+{
+    text-align: center;
+    color: #fff;
+    background-color:#880808;
+    padding: 10px 10px;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.product {
+    width: 48%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.product img {
+    width: 500px;
+    height: auto;
+    margin: 0 auto 10px;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.product p {
+    margin: 5px 0;
+}
+
+.selection {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+#component {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+#addButton {
+    background-color: #880808;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#addButton:hover {
+    background-color: #ff0000;
+}
+
+.comparison table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.comparison th, .comparison td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.comparison th {
+    background-color: #880808;
+    color: #fff;
+}
+
+.comparison button {
+    background-color: #880808;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.comparison button:hover {
+    background-color: #ff0000;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="compareStyles.css">
+    <link rel="stylesheet" href="headerStyle.css">
+    <title>Tech Comparison</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    techinEZ
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="finder.html">Use tech finder</a></li>
+                <li><a href="compare.html">Compare tech</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="title">
+            <h1>Tech Comparison</h1>
+        </div>
+        
+        <div class="product-grid">
+            <div class="product">
+                <img src="Images/iphone13.png" alt="Product 1">
+                <h3>IPhone 13</h3>
+                <br>
+                <p>Weight: 174g</p>
+                <p>Dimensions: 146.7 x 71.5 x 7.7mm</p>
+                <p>Screen size: 6.1-inch</p>
+                <p>Resolution: 1170 x 2532</p>
+                <p>CPU: A15 Bionic</p>
+                <p>RAM: 4GB</p>
+                <p>Storage: 128GB/256GB/512GB</p>
+                <p>Battery: 3,240mAh</p>
+                <p>Rear camera: 12MP+12MP</p>
+                <p>Front camera: 12MP</p>
+                <br>
+                <p>The iPhone 13 is no longer a new phone, 
+                    but it remains powerful, has decent battery life, 
+                    and is cheaper than the new iPhone 15, while packing 
+                    in similar screen specs.
+                </p>
+            </div>
+            <div class="product">
+                <img src="Images/iphone15.jpg" alt="Product 2">
+                <h3>IPhone 15</h3>
+                <br>
+                <p>Weight: 171g</p>
+                <p>Dimensions: 147.6 x 71.6 x 7.8mm</p>
+                <p>Screen size: 6.1-inch</p>
+                <p>Resolution: 1179 x 2556</p>
+                <p>CPU: A16 Bionic</p>
+                <p>RAM: 6GB (TBC)</p>
+                <p>Storage: 128GB/256GB/512GB</p>
+                <p>Battery: 3,349mAh (TBC)</p>
+                <p>Rear camera: 48MP+12MP</p>
+                <p>Front camera: 12MP</p>
+                <br>
+                <p>The iPhone 15 has a lot of upgrades 
+                    over the iPhone 13, including a Dynamic 
+                    Island, USB-C, a 48MP camera, and a faster 
+                    chipset, but it also costs more.
+                </p>
+            </div>
+        </div>
+
+        <div class="selection">
+            <label for="component">Select Component:</label>
+            <select id="component">
+                <option value="">-- Select --</option>
+                <option value="cpu">CPU</option>
+                <option value="gpu">GPU</option>
+                <!-- Add more component options -->
+            </select>
+            <button id="addButton">Add Component</button>
+        </div>
+        <div class="comparison">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Specification</th>
+                        <th>Performance</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="comparisonTable">
+                    <!-- Populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="compareScript.js"></script>
+</body>
+</html>
