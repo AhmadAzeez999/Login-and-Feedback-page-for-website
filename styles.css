@@ -78,6 +78,12 @@ p
     cursor: pointer;
 }
 
+.container
+{
+    max-width: 900px;
+    margin: auto;
+}
+
 .highlights
 {
     max-width: 1000px;
