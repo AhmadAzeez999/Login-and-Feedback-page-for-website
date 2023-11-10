@@ -1,0 +1,11 @@
+{
+  "name": "techin-ez-project",
+  "version": "1.0.0",
+  "description": "This is a web application for the techinez INC that delivers the product search and comparision engine software system",
+  "main": "techinez.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jay D Mistry & Ahmad",
+  "license": "ISC"
+}

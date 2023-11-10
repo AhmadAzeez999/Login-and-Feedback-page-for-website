@@ -1,0 +1,18 @@
+.main_box{
+    background-color: blue;
+    width: 670px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-left: 260px;
+    padding: 8px;
+}
+.m_class{
+    background-color: white;
+    color: black;
+    font-size: 29px;
+    padding: 4px;
+    margin-left: 5px;
+    width: 667px;
+    box-sizing: border-box;
+}

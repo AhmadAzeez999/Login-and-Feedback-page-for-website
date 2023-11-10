@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/templates/compareStyles.css">
+    <link rel="stylesheet" href="/templates/headerStyle.css">
+    <title>Tech Comparison</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/home">
+                    techinEZ
+                </a>
+            </div>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/signup">Sign Up</a></li>
+                <li><a href="/login">Log In</a></li>
+                <li><a href="/finder">Use tech finder</a></li>
+                <li><a href="/compare">Compare tech</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="title">
+            <h1>Tech Comparison</h1>
+        </div>
+
+        <div class="product-columns">
+            <div class="product-column">
+                <select id="selectBox1">
+                    <option value="">Select a product</option>
+                    <option value="iphone13">IPhone 13</option>
+                    <option value="iphone15">IPhone 15</option>
+                    <option value="iphone11">IPhone 11</option>
+                    <option value="iphone12">IPhone 12</option>
+                    <option value="iphone8">IPhone 8</option>
+                </select>
+            </div>
+            <div class="product-column">
+                <select id="selectBox2">
+                    <option value="">Select a product</option>
+                    <option value="iphone13">IPhone 13</option>
+                    <option value="iphone15">IPhone 15</option>
+                    <option value="iphone11">IPhone 11</option>
+                    <option value="iphone12">IPhone 12</option>
+                    <option value="iphone8">IPhone 8</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="product-columns">
+            <div class="product-column" id="product1">
+                <!-- Product 1 details go here -->
+            </div>
+            <div class="product-column" id="product2">
+                <!-- Product 2 details go here -->
+            </div>
+        </div>
+    </main>
+    <script src="/templates/compareScript.js"></script>
+</body>
+</html>
