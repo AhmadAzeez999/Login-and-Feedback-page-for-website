@@ -5,17 +5,54 @@ body
     font-family: 'Roboto', sans-serif;
 }
 
-.container {
+.container 
+{
     text-align: center;
     padding: 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-input {
+.container img
+{
+    object-fit: contain;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.container a
+{
+    text-decoration: none;
+    color: black;
+}
+
+#results p 
+{
+    text-align: left;
+}
+
+#results h3
+{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+input 
+{
     padding: 10px;
     width: 300px;
 }
 
-button {
+select
+{
+    padding: 10px;
+    width: 323px;
+    background-color: white;
+    border-width: 1px;
+}
+
+button 
+{
     background-color: #880808;
     color: #fff;
     border: none;
@@ -25,7 +62,8 @@ button {
 }
 
 /* Style the disabled button */
-button:disabled {
+button:disabled 
+{
     opacity: 0.6;
     background-color: #ccc;
     color: #888;
@@ -33,7 +71,8 @@ button:disabled {
 }
 
 /* Disable user interactions for the button */
-button:disabled {
+button:disabled 
+{
     pointer-events: none;
 }
 
@@ -47,7 +86,8 @@ button:disabled {
     display: block;
 }
 
-.result-line {
+.result-line 
+{
     display: flex;
     margin-bottom: 20px;
     border: 1px solid #ddd;
@@ -55,22 +95,26 @@ button:disabled {
     border-radius: 5px;
 }
 
-.result-line img {
+.result-line img 
+{
     max-width: 100px;
     height: auto;
     margin-right: 10px;
 }
 
-.product-info {
+.product-info 
+{
     flex: 1;
 }
 
-.product-info h3 {
+.product-info h3 
+{
     font-size: 20px;
     margin: 0;
 }
 
-.product-info p {
+.product-info p 
+{
     margin: 5px 0;
 }
 

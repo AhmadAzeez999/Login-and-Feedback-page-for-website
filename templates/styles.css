@@ -159,6 +159,26 @@ p
     max-width: 1000px;
 }
 
+.container
+{
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Feedback-Form */
+.contact-content
+{
+    max-width: 900px;
+    margin: auto;
+}
+
+.contact-content textarea
+{
+    width: 100%;
+    height: 100px;
+    resize: none;
+}
+
 /* Footer styles */
 footer 
 {
