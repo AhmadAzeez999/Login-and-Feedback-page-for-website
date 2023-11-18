@@ -20,12 +20,6 @@ body
     padding-left: 50px;
 }
 
-.container a
-{
-    text-decoration: none;
-    color: black;
-}
-
 #results p 
 {
     text-align: left;
@@ -93,6 +87,17 @@ button:disabled
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 5px;
+}
+
+.result-line:hover
+{
+    border: 1px solid #880808;
+}
+
+.result-line button
+{
+    height: 40px;
+    align-self: flex-end;
 }
 
 .result-line img 
