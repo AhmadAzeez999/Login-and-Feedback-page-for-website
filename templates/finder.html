@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/templates/finderStyles.css">
     <link rel="stylesheet" href="/templates/headerStyle.css">
+    <link rel="stylesheet" href="/templates/footerStyle.css">
     <title>Tech Product Finder</title>
 </head>
 <body>
@@ -26,104 +27,98 @@
             </ul>
         </nav>
     </header>
-    <div class="container">
+
+    <main>
         
-        <div class="firstCategory" id="category1">
-            <!-- Category 1 content goes here -->
-            <input type="text" id="productInput" placeholder="Enter the name of the product">
-            <button id="doneButton1">Done</button>
-        </div>
-        <div class="category" id="category2">
-            <!-- Category 4 content goes here -->
-            <input type="number" min="0.01" step="0.01" max="2500" id="productInput" placeholder="Enter your budget">
-            <button id="doneButton2">Done</button>
+        <div class="loader-container">
+            <div class="loader-wrapper">
+                <img src="/templates/Loading icon.gif">
+                <p>Your request is being processed...</p>
+                <span class="loader"><span class="loader-inner"></span></span>
+            </div>
         </div>
 
-        <div id="results" style="display: none;">
-            <h2>Here are the results!</h2>
-
-            <div class="result-line">
-                <img src="/templates/Headphones 1.jpg" alt="Product Image">
-                <div class="product-info">
-                    <h3>JBL Tune 500 Wired On-Ear Headphones with One-Button Remote/Mic</h3>
-                    <p>Equipped with JBL Pure Bass sound, 32mm JBL drivers, and a one-button universal remote that is compatible with most smartphones, these headphones provide quick access to great sound every time.</p>
-                    <p>Customer Rating: 4.4/5</p>
-                    <p>Price: $44.98</p>
-                    <p>Percentage of Customers Recommend: 90%</p>
-                    <a href="https://www.amazon.ca/JBL-Ear-Headphone-One-Button-Remote/dp/B07PFLL2CY/ref=sr_1_28?crid=1YNNY33APIUTV&keywords=jbl%2Bheadphones&qid=1699657658&s=electronics&sprefix=jbl%2Bheadphones%2Celectronics%2C113&sr=1-28&th=1" >
-                        View product
-                    </a>
-                </div>
-                <button>Save</button>
-                <img src="/templates/Amazon_logo.png" alt="Website Image">
-            </div>
-
-            <div class="result-line">
-                <img src="/templates/Headphones 1.jpg" alt="Product Image">
-                <div class="product-info">
-                    <h3>JBL Tune 500 Wired On-Ear Headphones with One-Button Remote/Mic</h3>
-                    <p>Equipped with JBL Pure Bass sound, 32mm JBL drivers, and a one-button universal remote that is compatible with most smartphones, these headphones provide quick access to great sound every time.</p>
-                    <p>Customer Rating: 4.4/5</p>
-                    <p>Price: $44.98</p>
-                    <p>Percentage of Customers Recommend: 90%</p>
-                    <a href="https://www.amazon.ca/JBL-Ear-Headphone-One-Button-Remote/dp/B07PFLL2CY/ref=sr_1_28?crid=1YNNY33APIUTV&keywords=jbl%2Bheadphones&qid=1699657658&s=electronics&sprefix=jbl%2Bheadphones%2Celectronics%2C113&sr=1-28&th=1" >
-                        View product
-                    </a>
-                </div>
-                <button>Save</button>
-                <img src="/templates/Amazon_logo.png" alt="Website Image">
-            </div>
-
-            <div class="result-line">
-                <img src="/templates/Headphones 1.jpg" alt="Product Image">
-                <div class="product-info">
-                    <h3>JBL Tune 500 Wired On-Ear Headphones with One-Button Remote/Mic</h3>
-                    <p>Equipped with JBL Pure Bass sound, 32mm JBL drivers, and a one-button universal remote that is compatible with most smartphones, these headphones provide quick access to great sound every time.</p>
-                    <p>Customer Rating: 4.4/5</p>
-                    <p>Price: $44.98</p>
-                    <p>Percentage of Customers Recommend: 90%</p>
-                    <a href="https://www.amazon.ca/JBL-Ear-Headphone-One-Button-Remote/dp/B07PFLL2CY/ref=sr_1_28?crid=1YNNY33APIUTV&keywords=jbl%2Bheadphones&qid=1699657658&s=electronics&sprefix=jbl%2Bheadphones%2Celectronics%2C113&sr=1-28&th=1" >
-                        View product
-                    </a>
-                </div>
-                <button>Save</button>
-                <img src="/templates/Amazon_logo.png" alt="Website Image">
-            </div>
-
-            <div class="result-line">
-                <img src="/templates/Headphones 4.png" alt="Product Image">
-                <div class="product-info">
-                    <h3>JBL Tune 500BT On-Ear Bluetooth Headphones</h3>
-                    <p>Transform your listening experience with these JBL Tune 500BT on-ear headphones. Bluetooth technology lets you pair them effortlessly with your device while powerful drivers with JBL Pure Bass Sound deliver incredible audio quality. </p>
-                    <p>Customer Rating: 4.5/5</p>
-                    <p>Price: $79.99</p>
-                    <p>Percentage of Customers Recommend: 90%</p>
-                    <a href="https://www.bestbuy.ca/en-ca/product/jbl-tune-500bt-on-ear-bluetooth-headphones-black/15458144" >
-                        View product
-                    </a>
-                </div>
-                <button>Save</button>
-                <img src="/templates/Bestbuy logo.png" alt="Website Image">
-            </div>
-
-            <div class="result-line">
-                <img src="/templates/Headphones 4.png" alt="Product Image">
-                <div class="product-info">
-                    <h3>JBL Tune 500BT On-Ear Bluetooth Headphones</h3>
-                    <p>Transform your listening experience with these JBL Tune 500BT on-ear headphones. Bluetooth technology lets you pair them effortlessly with your device while powerful drivers with JBL Pure Bass Sound deliver incredible audio quality. </p>
-                    <p>Customer Rating: 4.5/5</p>
-                    <p>Price: $79.99</p>
-                    <p>Percentage of Customers Recommend: 90%</p>
-                    <a href="https://www.bestbuy.ca/en-ca/product/jbl-tune-500bt-on-ear-bluetooth-headphones-black/15458144" >
-                        View product
-                    </a>
-                </div>
-                <button>Save</button>
-                <img src="/templates/Bestbuy logo.png" alt="Website Image">
-            </div>
+        <div class="container">
             
+            <form action="" method="POST" id="myForm" class="form_con" >
+                <div class="firstCategory" id="category1">
+                    <!-- Category 1 content goes here -->
+                    <input type="text" class="productInput" id="input1" placeholder="Enter the name of the product" autocomplete="off" autofocus >
+                    <button id="doneButton1" disabled >Done</button>
+                </div>
+                <div class="category" id="category2">
+                    <!-- Category 2 content goes here -->
+                    <input type="text" class="productInput" id="input2" placeholder="Enter your budget" autocomplete="off">
+                    <button id="doneButton2" disabled>Done</button>
+                </div>
+                <div class="form-buttons display-control">
+                    <button type="submit" id="btn_sub" class="bt">Submit</button>
+                    <button type="button" class="add-attribute"> Add attribute</button>
+                </div>
+            </form>
+
+            <div id="results" style="display: none;">
+
+                <div class="store-container" id="amazon-container">
+                    <img src="/templates/Amazon_logo.png" alt="Website Image">
+
+                    <!--Temp-->
+                    <div class="result-line">
+                        <button>Save</button>
+                    </div>
+
+                    <div class="result-line">
+                        <img src="/templates/Headphones 1.jpg" alt="Product Image">
+                        <div class="product-info">
+                            <h3>JBL Tune 500 Wired On-Ear Headphones with One-Button Remote/Mic</h3>
+                            <p>Equipped with JBL Pure Bass sound, 32mm JBL drivers, and a one-button universal remote that is compatible with most smartphones, these headphones provide quick access to great sound every time.</p>
+                            <p>Customer Rating: 4.4/5</p>
+                            <p>Price: $44.98</p>
+                            <p>Percentage of Customers Recommend: 90%</p>
+                        </div>
+                        <a target="_blank" href="https://www.amazon.ca/JBL-Ear-Headphone-One-Button-Remote/dp/B07PFLL2CY/ref=sr_1_28?crid=1YNNY33APIUTV&keywords=jbl%2Bheadphones&qid=1699657658&s=electronics&sprefix=jbl%2Bheadphones%2Celectronics%2C113&sr=1-28&th=1" >
+                            View product
+                        </a>
+                        <button>Save</button>
+                    </div>
+                </div>
+
+                <div class="store-container" id="bestbuy-container">
+                    <img src="/templates/Bestbuy logo.png" alt="Website Image">
+
+                    <div class="result-line">
+                        <img src="/templates/Headphones 4.png" alt="Product Image">
+                        <div class="product-info">
+                            <h3>JBL Tune 500BT On-Ear Bluetooth Headphones</h3>
+                            <p>Transform your listening experience with these JBL Tune 500BT on-ear headphones. Bluetooth technology lets you pair them effortlessly with your device while powerful drivers with JBL Pure Bass Sound deliver incredible audio quality. </p>
+                            <p>Customer Rating: 4.5/5</p>
+                            <p>Price: $79.99</p>
+                            <p>Percentage of Customers Recommend: 90%</p>
+                        </div>
+                        <a target="_blank" href="https://www.bestbuy.ca/en-ca/product/jbl-tune-500bt-on-ear-bluetooth-headphones-black/15458144" >
+                            View product
+                        </a>
+                        <button>Save</button>
+                    </div>
+                </div>
+
+                <button onclick="window.location.reload()">Search again</button>
+
+                <h2> Are you satisfied with the results?</h2>
+                <a> Give us your feedback </a>
+                
+            </div>
         </div>
-    </div>
+
+        <div class="display-control">
+            <footer>
+                <p>&copy; techinEZ</p>
+            </footer>
+        </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/templates/finderScript.js"></script>
+    <script src="/templates/finderAdd.js"></script>
 </body>
 </html>
