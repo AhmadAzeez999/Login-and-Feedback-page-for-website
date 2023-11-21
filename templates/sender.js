@@ -6,6 +6,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const a_con = document.getElementById('amazon-container');
     btn.addEventListener('click',  async (e)=> {
     e.preventDefault();
+
+    const categories = document.querySelectorAll(".category");
+    for (let i = 1; i <= categories.length + 1; i++) 
+    {
+        const currentInput = document.getElementById(`input${i}`);
+        // Make the input field read-only
+        currentInput.readOnly = true;
+    }
+
+    const specInputs = document.querySelectorAll(".specInput");
+    for (let i = 1; i <= specInputs.length + 1; i++) 
+    {
+        const currentInput = document.getElementById(`spec${i}`);
+        // Make the input field read-only
+        currentInput.readOnly = true;
+    }
+
     const form_u = document.getElementById('myForm');
     const input_name = document.getElementById('input1');
     const input_budget = document.getElementById('input2');

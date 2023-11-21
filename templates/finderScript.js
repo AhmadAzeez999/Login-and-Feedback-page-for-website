@@ -19,13 +19,11 @@ document.addEventListener("DOMContentLoaded", function ()
             if (currentInput.value.trim() !== "") 
             {
                 doneButton.disabled = true;
-                // Make the input field read-only
-                currentInput.readOnly = true;
 
                 if (currentCategory !== categories.length)
-                    categories[currentCategory].style.display = "block";
+                    categories[currentCategory].style.display = "flex";
                 else
-                    categories[currentCategory - 1].style.display = "block";
+                    categories[currentCategory - 1].style.display = "flex";
 
                 // Check if all categories are displayed
                 if (currentCategory === categories.length) {
@@ -94,22 +92,38 @@ document.addEventListener("DOMContentLoaded", function ()
         e.preventDefault();
     });
 
-    // For the header effect
-    // let prevScrollPos =  window.scrollX;
-    
-    // $(window).scroll(function() {
-    //     let currentScrollPos = window.scrollY;
+    const submitBtn = document.getElementById("btn_sub");
+    const addBtn = document.getElementById("btn_add");
 
-    //     if (prevScrollPos > currentScrollPos) {
-    //         // Scrolling up
-    //         $('header').slideDown();
-    //     } else {
-    //         // Scrolling down
-    //         $('header').slideUp();
-    //     }
+    submitBtn.addEventListener("click", function()
+    {
+        addBtn.style.visibility = 'hidden';
+    });
 
-    //     prevScrollPos = currentScrollPos;
-    // });
+    // For display tip box
+    $('#tooltipButton').hover(
+        function(event) {
+          $('#tooltip')
+            .css({
+              display: 'block',
+              left: event.pageX + 10, // Adjust as needed
+              top: event.pageY + 10   // Adjust as needed
+            });
+        },
+        function() {
+          $('#tooltip').css('display', 'none');
+        }
+      );
+
+      $(document).mousemove(function(event) {
+        if ($('#tooltip').css('display') === 'block') {
+          $('#tooltip')
+            .css({
+              left: event.pageX + 10, // Adjust as needed
+              top: event.pageY + 10   // Adjust as needed
+            });
+        }
+      });
 
     function enableScrolling() 
     {

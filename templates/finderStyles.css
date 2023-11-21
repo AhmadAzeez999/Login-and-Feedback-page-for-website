@@ -39,7 +39,7 @@ main
 {
     text-align: center;
     padding: 20px;
-    max-width: 1200px;
+    max-width: 900px;
     margin: auto;
     height: auto;
 }
@@ -47,6 +47,28 @@ main
 #btn_sub
 {
     margin-top: 20px;
+}
+
+#btn_sub:disabled
+{
+    margin-top: 20px;
+    position: absolute;
+    margin-left: 49px;
+}
+
+.tooltip 
+{
+    position: absolute;
+    background-color: #fff;
+    color: #000000;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+}
+
+#btn_add:hover + .tooltip 
+{
+    display: block;
 }
 
 .container img
@@ -91,6 +113,7 @@ button
     color: #fff;
     border: none;
     padding: 10px 20px;
+    margin: 0px 10px 0px 10px;
     border-radius: 3px;
     cursor: pointer;
     font-size: 20px;
@@ -120,16 +143,53 @@ button:disabled
 .category {
     display: none;
     margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .firstCategory
 {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
 
-.otherCategory
+.otherCategory 
 {
+    display: flex;
     margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form_con label
+{
+    font-size: 24px;
+}
+
+.form_con input
+{
+    width: 700px;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input
+{
+    font-size: 18px; /* You can adjust the size to your preference */
+    /* Add any other styles you need */
+}
+
+input:read-only 
+{
+    background-color: #f0f0f0; /* Change background color for read-only input */
+    color: #777; /* Change text color for read-only input */
+    cursor: not-allowed; /* Change cursor style for read-only input */
 }
 
 .store-container
@@ -202,30 +262,6 @@ button:disabled
 .product-info p 
 {
     margin: 5px 0;
-}
-
-.form_con input
-{
-    width: 700px;
-    height: 50px;
-}
-
-.form_con button
-{
-    margin-left: 10px;
-}
-
-input
-{
-    font-size: 18px; /* You can adjust the size to your preference */
-    /* Add any other styles you need */
-}
-
-input:read-only 
-{
-    background-color: #f0f0f0; /* Change background color for read-only input */
-    color: #777; /* Change text color for read-only input */
-    cursor: not-allowed; /* Change cursor style for read-only input */
 }
 
 .display-control

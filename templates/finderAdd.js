@@ -19,7 +19,7 @@ $(document).ready(function ()
 
     function addAttributeField() 
     {
-        const newInput = $('<input>', { type: 'text', class: 'productInput', placeholder: 'Enter attribute'});
+        const newInput = $('<input>', { type: 'text', class: 'specInput', id: 'spec' + attributeCount, placeholder: 'Enter attribute'});
         const newButton = $('<button>', { id: 'newDoneButton' + attributeCount, text: 'Done' });
 
         // Add e.preventDefault() to the new button
@@ -28,7 +28,6 @@ $(document).ready(function ()
             e.preventDefault();
             // Button click logic here
             newButton.prop('disabled', true);
-            newInput.prop('readonly', true);
         });
 
         const newCategory = $('<div>', { class: 'otherCategory', id: 'category' + attributeCount });
@@ -36,5 +35,19 @@ $(document).ready(function ()
         newCategory.append(newInput);
         newCategory.append(newButton);
         $('.form-buttons').before(newCategory);
+
+        const currentInput = document.getElementById('spec' + attributeCount);
+        currentInput.focus();
+        currentInput.addEventListener("keyup", function (event) 
+        {
+            if (event.key === "Enter" && currentInput.value.trim() !== "")
+            {
+                // Simulate a click on the associated "Done" button
+                newButton.click();
+                
+                const nextInput = document.getElementById('spec' + attributeCount);
+                nextInput.focus();
+            }
+        });
     }
 });

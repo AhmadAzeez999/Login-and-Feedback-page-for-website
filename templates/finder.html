@@ -44,18 +44,21 @@
                 <div class="firstCategory" id="category1">
                     <!-- Category 1 content goes here -->
                     <label for="p_name">Product name</label>
-                    <input type="text" class="productInput" id="input1" placeholder="Enter the name of the product" autocomplete="off" autofocus name="p_name" >
+                    <input type="text" class="productInput" id="input1" placeholder="Enter the name of the product" autocomplete="off" autofocus name="p_name" required>
                     <button id="doneButton1" disabled >Done</button>
                 </div>
                 <div class="category" id="category2">
                     <!-- Category 2 content goes here -->
                     <label for="b_budget">Budget</label>
-                    <input type="text" class="productInput" id="input2" placeholder="Enter your budget" autocomplete="off" name="b_budget">
+                    <input type="text" class="productInput" id="input2" placeholder="Enter your budget" autocomplete="off" name="b_budget" required>
                     <button id="doneButton2" disabled>Done</button>
                 </div>
                 <div class="form-buttons display-control">
                     <button type="submit" id="btn_sub" class="bt">Submit</button>
-                    <button type="button" class="add-attribute"> Add attribute</button>
+                    <button type="button" class="add-attribute" id="btn_add"> &plus; Add attribute</button>
+                    <div id="tooltip" class="tooltip">
+                        <p>To add specifications for a more specific result <br> (5 specs MAX)</p>
+                    </div>
                 </div>
             </form>
 
