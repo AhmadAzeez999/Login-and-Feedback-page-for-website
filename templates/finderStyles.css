@@ -199,12 +199,6 @@ button:disabled
     flex: 1;
 }
 
-.product-info h3 
-{
-    font-size: 20px;
-    margin: 0;
-}
-
 .product-info p 
 {
     margin: 5px 0;

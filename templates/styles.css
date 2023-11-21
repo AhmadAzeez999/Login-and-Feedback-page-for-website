@@ -6,7 +6,7 @@ body, h1, p
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-image: url("/templates//Parallax\ background\ 2.png");
+    background-image: url("/templates/b2.png");
 
 }
 
@@ -14,7 +14,7 @@ body, h1, p
 .hero 
 {
     position: relative; /* Set position to relative for pseudo-element positioning */
-    background-image: url('/templates//OnlineShoppingImage.jpg'); /* Add your hero image path */
+    background-image: url('/templates/OnlineShoppingImage.jpg'); /* Add your hero image path */
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -177,4 +177,13 @@ p
     width: 100%;
     height: 100px;
     resize: none;
+}
+
+/* Footer styles */
+footer 
+{
+    text-align: center;
+    background-color: #880808;
+    color: #fff;
+    padding: 10px 0;
 }

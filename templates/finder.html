@@ -40,15 +40,17 @@
 
         <div class="container">
             
-            <form action="" method="POST" id="myForm" class="form_con" >
+            <form action="http://127.0.0.1:5000" method="POST" id="myForm" class="form_con" >
                 <div class="firstCategory" id="category1">
                     <!-- Category 1 content goes here -->
-                    <input type="text" class="productInput" id="input1" placeholder="Enter the name of the product" autocomplete="off" autofocus >
+                    <label for="p_name">Product name</label>
+                    <input type="text" class="productInput" id="input1" placeholder="Enter the name of the product" autocomplete="off" autofocus name="p_name" >
                     <button id="doneButton1" disabled >Done</button>
                 </div>
                 <div class="category" id="category2">
                     <!-- Category 2 content goes here -->
-                    <input type="text" class="productInput" id="input2" placeholder="Enter your budget" autocomplete="off">
+                    <label for="b_budget">Budget</label>
+                    <input type="text" class="productInput" id="input2" placeholder="Enter your budget" autocomplete="off" name="b_budget">
                     <button id="doneButton2" disabled>Done</button>
                 </div>
                 <div class="form-buttons display-control">
@@ -59,53 +61,20 @@
 
             <div id="results" style="display: none;">
 
-                <div class="store-container" id="amazon-container">
-                    <img src="/templates/Amazon_logo.png" alt="Website Image">
+                <div class="store-container" id="bestbuy-container">
+                    <img src="/templates/Bestbuy logo.png" alt="Website Logo">
 
-                    <!--Temp-->
-                    <div class="result-line">
-                        <button>Save</button>
-                    </div>
-
-                    <div class="result-line">
-                        <img src="/templates/Headphones 1.jpg" alt="Product Image">
-                        <div class="product-info">
-                            <h3>JBL Tune 500 Wired On-Ear Headphones with One-Button Remote/Mic</h3>
-                            <p>Equipped with JBL Pure Bass sound, 32mm JBL drivers, and a one-button universal remote that is compatible with most smartphones, these headphones provide quick access to great sound every time.</p>
-                            <p>Customer Rating: 4.4/5</p>
-                            <p>Price: $44.98</p>
-                            <p>Percentage of Customers Recommend: 90%</p>
-                        </div>
-                        <a target="_blank" href="https://www.amazon.ca/JBL-Ear-Headphone-One-Button-Remote/dp/B07PFLL2CY/ref=sr_1_28?crid=1YNNY33APIUTV&keywords=jbl%2Bheadphones&qid=1699657658&s=electronics&sprefix=jbl%2Bheadphones%2Celectronics%2C113&sr=1-28&th=1" >
-                            View product
-                        </a>
-                        <button>Save</button>
-                    </div>
                 </div>
 
-                <div class="store-container" id="bestbuy-container">
-                    <img src="/templates/Bestbuy logo.png" alt="Website Image">
+                <div class="store-container" id="amazon-container">
+                    <img src="/templates/Amazon_logo.png" alt="Website Logo">
 
-                    <div class="result-line">
-                        <img src="/templates/Headphones 4.png" alt="Product Image">
-                        <div class="product-info">
-                            <h3>JBL Tune 500BT On-Ear Bluetooth Headphones</h3>
-                            <p>Transform your listening experience with these JBL Tune 500BT on-ear headphones. Bluetooth technology lets you pair them effortlessly with your device while powerful drivers with JBL Pure Bass Sound deliver incredible audio quality. </p>
-                            <p>Customer Rating: 4.5/5</p>
-                            <p>Price: $79.99</p>
-                            <p>Percentage of Customers Recommend: 90%</p>
-                        </div>
-                        <a target="_blank" href="https://www.bestbuy.ca/en-ca/product/jbl-tune-500bt-on-ear-bluetooth-headphones-black/15458144" >
-                            View product
-                        </a>
-                        <button>Save</button>
-                    </div>
                 </div>
 
                 <button onclick="window.location.reload()">Search again</button>
 
                 <h2> Are you satisfied with the results?</h2>
-                <a> Give us your feedback </a>
+                <a href="/feedback"> Give us your feedback </a>
                 
             </div>
         </div>

@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="/templates/loginStyles.css">
     <link rel="stylesheet" href="/templates/headerStyle.css">
+    <script src="/templates/login.js"></script>
 
     <title>Login Page</title>
 </head>
@@ -31,20 +32,21 @@
     <main>
         <div class="login-container">
             <h2>Login</h2>
-            <form action="/login" method="post">
+            <form action="/login" method="post" id="myForm">
                 <div class="form-group">
                     <label for="useremail">Useremail:</label>
-                    <input type="text" id="username" name="useremail" placeholder="Enter your username" required>
+                    <input type="text" id="user_email" name="useremail" placeholder="Enter your username" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <input type="password" id="user_pass" name="password" placeholder="Enter your password" required>
                 </div>
                 <div class="form-group">
-                    <button type="submit">Login</button>
+                    <button type="submit" id="my_btn">Login</button>
                 </div>
             </form>
             <p>Don't have an account? <a href="/signup">Sign up here</a></p>
+            <p id="mess-resp" style="color: white; background-color: brown; font-size: 24px; margin-left: 25px; border-radius: 8px;  padding: 4px; width: fit-content; text-align: center; opacity: 0; transition: all 0.9s ease;"></p>
         </div>
     </main>
 

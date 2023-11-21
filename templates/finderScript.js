@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function ()
             if (currentInput.value.trim() !== "") 
             {
                 doneButton.disabled = true;
-
                 // Make the input field read-only
                 currentInput.readOnly = true;
 
@@ -96,21 +95,21 @@ document.addEventListener("DOMContentLoaded", function ()
     });
 
     // For the header effect
-    let prevScrollPos = window.pageYOffset;
+    // let prevScrollPos =  window.scrollX;
     
-    $(window).scroll(function() {
-        let currentScrollPos = window.pageYOffset;
+    // $(window).scroll(function() {
+    //     let currentScrollPos = window.scrollY;
 
-        if (prevScrollPos > currentScrollPos) {
-            // Scrolling up
-            $('header').slideDown();
-        } else {
-            // Scrolling down
-            $('header').slideUp();
-        }
+    //     if (prevScrollPos > currentScrollPos) {
+    //         // Scrolling up
+    //         $('header').slideDown();
+    //     } else {
+    //         // Scrolling down
+    //         $('header').slideUp();
+    //     }
 
-        prevScrollPos = currentScrollPos;
-    });
+    //     prevScrollPos = currentScrollPos;
+    // });
 
     function enableScrolling() 
     {

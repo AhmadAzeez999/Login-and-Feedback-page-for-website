@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
                       useremail: user_e.value,
                      password: user_p.value,
                      confirmPassword: user_c_pass.value};
-        console.log(f_obj);
          const sent_data = await fetch(form.action, {
             method: "post",
             headers: {
@@ -25,10 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
          if(sent_data.status === 201){
             let resp_data = await sent_data.json();
-            console.log(resp_data);
+            mess_display.style.opacity = "1";
+            setTimeout(function(){
+               mess_display.style.opacity = "0";
+            }, 2000)
             mess_display.textContent = resp_data.resp;
          }
          else{
+            let res_recv = await resp_data.json();
+         
             mess_display.textContent = resp_data.resp;
          }
     })

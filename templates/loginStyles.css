@@ -7,8 +7,7 @@ body
 
 body
 {
-    background-image: url('/templates//Parallax\ background\ 1.png'),
-                      url('/templates//Parallax\ background\ 2.png');
+    background-image: url('/templates/b1.png');
     background-size: cover, cover;
     background-position: center, center;
     background-repeat: no-repeat;
@@ -23,6 +22,7 @@ main
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin-top:  130px;
 }
 
 .login-container 

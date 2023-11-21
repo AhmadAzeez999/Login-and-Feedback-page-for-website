@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/templates/styles.css">
     <link rel="stylesheet" href="/templates/headerStyle.css">
-    <link rel="stylesheet" href="/templates/footerStyle.css">
+    <script src="/templates/contact.js"></script>
     <title>Contact Us</title>
 </head>
 <body>
@@ -29,19 +29,20 @@
     </header>
     <main>
         <div class="contact-content">
-            <h2>What do you think?</h2>
+            <h2 id="hidden_greet" style="opacity: 0;"></h2>
             <p>We'd love to get your feedback</p>
 
             <h2>Feedback Form</h2>
-            <form action="/contact", method="post">
+            <form action="/contact", method="post" id="myForm">
           
                 <div class="form-group">
                     <label for="message">Your Message:</label>
-                    <textarea id="message" name="message" placeholder="Write your message" required></textarea>
+                    <textarea id="user_message" name="message" placeholder="Write your message" required></textarea>
                 </div>
                 <div class="form-group">
-                    <button class="cta-button" type="submit">Send Message</button>
+                    <button class="cta-button" type="submit" id="my_btn">Send Message</button>
                 </div>
+                <p id="mess-resp" style="color: white; background-color: brown; font-size: 24px; margin-left: 25px; border-radius: 8px;  padding: 4px; width: fit-content; text-align: center; opacity: 0; transition: all 0.9s ease;"></p>
             </form>
         </div>
     </main>

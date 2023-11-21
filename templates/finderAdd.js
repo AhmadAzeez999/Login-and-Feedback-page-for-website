@@ -7,7 +7,6 @@ $(document).ready(function ()
     $('button.add-attribute').on('click', function (e) 
     {
         e.preventDefault(); // Prevent form submission
-
         if (attributeCount < maxAttributes) 
         {
             attributeCount++;

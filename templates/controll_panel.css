@@ -1,18 +1,29 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure full viewport height */
+}
+
 .main_box{
-    background-color: blue;
-    width: 670px;
+    background-color: rgb(76, 12, 12);
+    width: 750x;
     color: white;
     display: flex;
     flex-direction: column;
-    margin-left: 260px;
-    padding: 8px;
+    padding: 12px;
 }
-.m_class{
-    background-color: white;
+.m_class{ 
+    background-color: ivory;
     color: black;
-    font-size: 29px;
+    font-size: 25px;
     padding: 4px;
     margin-left: 5px;
-    width: 667px;
+    width: auto;
     box-sizing: border-box;
+    margin-top: 20px;
+
 }
