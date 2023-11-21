@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+main
+{
+    margin-top: 100px
+}
+
+.loader-container
+{
+    display: none;
+}
+
+.loader-wrapper
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #880808;
+    color: #fff;
+    font-size: 26px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container 
+{
+    text-align: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    height: auto;
+}
+
+#btn_sub
+{
+    margin-top: 20px;
+}
+
+.container img
+{
+    object-fit: contain;
+    padding-left: 50px;
+}
+
+#results
+{
+    display: none;
+}
+
+#results p 
+{
+    text-align: left;
+}
+
+#results h3
+{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+input 
+{
+    padding: 10px;
+    width: 300px;
+}
+
+select
+{
+    padding: 10px;
+    width: 323px;
+    background-color: white;
+    border-width: 1px;
+}
+
+button 
+{
+    background-color: #880808;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button:hover
+{
+    background-color: #835050;
+    color: #fff;
+}
+
+/* Style the disabled button */
+button:disabled 
+{
+    opacity: 0.6;
+    background-color: #ccc;
+    color: #888;
+    cursor: not-allowed;
+}
+
+/* Disable user interactions for the button */
+button:disabled 
+{
+    pointer-events: none;
+}
+
+.category {
+    display: none;
+    margin-top: 30px;
+}
+
+.firstCategory
+{
+    display: block;
+}
+
+.otherCategory
+{
+    margin-top: 30px;
+}
+
+.store-container
+{
+    height: auto;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+.store-container img
+{
+    height: 50px;
+    padding: 20px 0px 0px 0px;
+}
+
+.result-line 
+{
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 1px black;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+.result-line a
+{
+    text-decoration: none;
+    background-color: #880808;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 3px;
+    align-self: flex-end;
+    margin-right: 10px;
+
+}
+
+.result-line a:hover
+{
+    background-color: #835050;
+    color: #fff;
+}
+
+.result-line:hover
+{
+    border: 1px solid #880808;
+}
+
+.result-line button
+{
+    align-self: flex-end;
+}
+
+.result-line img 
+{
+    width: 150px;
+    height: 240px;
+    margin-right: 10px;
+    padding-right: 30px;
+    padding-top: 50px;
+}
+
+.product-info 
+{
+    flex: 1;
+}
+
+.product-info p 
+{
+    margin: 5px 0;
+}
+
+.form_con input
+{
+    width: 700px;
+    height: 50px;
+}
+
+.form_con button
+{
+    margin-left: 10px;
+}
+
+input
+{
+    font-size: 18px; /* You can adjust the size to your preference */
+    /* Add any other styles you need */
+}
+
+input:read-only 
+{
+    background-color: #f0f0f0; /* Change background color for read-only input */
+    color: #777; /* Change text color for read-only input */
+    cursor: not-allowed; /* Change cursor style for read-only input */
+}
+
+.display-control
+{
+    display: none;
+}
