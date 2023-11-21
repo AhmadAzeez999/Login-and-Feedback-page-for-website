@@ -115,15 +115,22 @@ document.addEventListener("DOMContentLoaded", function ()
         }
       );
 
-      $(document).mousemove(function(event) {
-        if ($('#tooltip').css('display') === 'block') {
-          $('#tooltip')
-            .css({
-              left: event.pageX + 10, // Adjust as needed
-              top: event.pageY + 10   // Adjust as needed
-            });
-        }
-      });
+    $(document).mousemove(function(event) 
+    {
+    if ($('#tooltip').css('display') === 'block') {
+        $('#tooltip')
+        .css({
+            left: event.pageX + 10, // Adjust as needed
+            top: event.pageY + 10   // Adjust as needed
+        });
+    }
+    });
+
+    // For dark mode
+    $('.dark-mode-btn').on('click', function() 
+    {
+        $('body').toggleClass('dark-mode');
+    });
 
     function enableScrolling() 
     {
