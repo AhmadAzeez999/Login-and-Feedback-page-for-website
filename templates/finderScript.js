@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function ()
             {
                 enableScrolling();
             });
-        }, 3000);
+        }, 20000); // wait time
         
     });
 

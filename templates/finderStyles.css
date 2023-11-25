@@ -214,6 +214,8 @@ input:read-only
     padding: 10px;
     border-radius: 5px;
     margin-top: 50px;
+    background-color: ivory;
+    font-size: 24px;
 }
 
 .result-line a
