@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
+*
+{
+    font-family: 'Quicksand', sans-serif;
+}
+
 /* Header styles */
 header 
 {
@@ -29,6 +36,18 @@ nav ul
 nav li 
 {
     margin-right: 20px;
+}
+
+.nav-text
+{
+    transition: all 0.5s ease;
+    font-size: 20px;
+    padding: 0px 10px 0px 10px
+}
+
+.nav-text:hover 
+{
+    font-size: 23px;
 }
 
 nav a 

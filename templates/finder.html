@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/templates/finderStyles.css">
     <link rel="stylesheet" href="/templates/headerStyle.css">
     <link rel="stylesheet" href="/templates/footerStyle.css">
+    <link rel="stylesheet" href="/templates/gameStyle.css">
     <title>Tech Product Finder</title>
 </head>
 <body>
@@ -17,13 +18,15 @@
                 </a>
             </div>
             <ul>
-                <li><a href="/home">Home</a></li>
-                <li><a href="/signup">Sign Up</a></li>
-                <li><a href="/login">Log In</a></li>
-                <li><a href="/finder">Use tech finder</a></li>
-                <li><a href="/compare">Compare tech</a></li>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li class="nav-text"><a href="/home">Home</a></li>
+                <li>|</li>
+                <li class="nav-text"><a href="/finder">Use tech finder</a></li>
+                <li>|</li>
+                <li class="nav-text"><a href="/compare">Compare tech</a></li>
+                <li>|</li>
+                <li class="nav-text"><a href="/login">Account</a></li>
+                <li>|</li>
+                <li class="nav-text"><a href="/about">About Us</a></li>
             </ul>
         </nav>
     </header>
@@ -32,7 +35,9 @@
         
         <div class="loader-container">
             <div class="loader-wrapper">
-                <img src="/templates/Loading icon.gif">
+                <div id="game-container">
+                    <div id="robot"></div>
+                </div>
                 <p>Your request is being processed...</p>
                 <span class="loader"><span class="loader-inner"></span></span>
             </div>
@@ -49,10 +54,10 @@
                 <div class="category" id="category2">
                     <!-- Category 2 content goes here -->
                     <label for="b_budget">Budget</label>
-                    <input type="text" class="productInput" id="input2" placeholder="Enter your budget" autocomplete="off" name="b_budget" required>
+                    <input type="text" class="productInput" id="input2" placeholder="Enter your budget (Type 'none' if you don't have a budget)" autocomplete="off" name="b_budget" required>
                     <button id="doneButton2" disabled>Done</button>
                 </div>
-                <div class="form-buttons display-control">
+                <div class="form-buttons display-buttons">
                     <button type="submit" id="btn_sub" class="bt">Submit</button>
                     <button type="button" class="add-attribute" id="btn_add"> &plus; Add attribute</button>
                     <div id="tooltip" class="tooltip">
@@ -100,5 +105,6 @@
     <script src="/templates/finderScript.js"></script>
     <script src="/templates/finderAdd.js"></script>
     <script src="/templates/sender.js"></script>
+    <script src="/templates/gameScript.js"></script>
 </body>
 </html>

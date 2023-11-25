@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", function ()
     const categories = document.querySelectorAll(".category");
     let currentCategory = 0;
 
+    const submitBtn = document.getElementById("btn_sub");
+    const addBtn = document.getElementById("btn_add");
+
     // Handle the click events for each "Done" button
     for (let i = 1; i <= categories.length + 1; i++) 
     {
@@ -28,9 +31,8 @@ document.addEventListener("DOMContentLoaded", function ()
                 // Check if all categories are displayed
                 if (currentCategory === categories.length) {
                     // Use jQuery fadeIn for the result display
-                    $("#results").fadeIn("slow");
-
-                    $(".display-control").fadeIn("fast");
+                    $(".display-buttons").fadeIn("slow");
+                    $("#btn_sub").focus();
                 }
                 currentCategory++;
                 // Change focus
@@ -92,12 +94,13 @@ document.addEventListener("DOMContentLoaded", function ()
         e.preventDefault();
     });
 
-    const submitBtn = document.getElementById("btn_sub");
-    const addBtn = document.getElementById("btn_add");
-
     submitBtn.addEventListener("click", function()
     {
-        addBtn.style.visibility = 'hidden';
+        addBtn.disabled = true;
+
+        $("#results").fadeIn("slow");
+
+        $(".display-control").fadeIn("fast");
     });
 
     // For display tip box

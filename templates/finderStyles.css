@@ -49,13 +49,6 @@ main
     margin-top: 20px;
 }
 
-#btn_sub:disabled
-{
-    margin-top: 20px;
-    position: absolute;
-    margin-left: 49px;
-}
-
 .tooltip 
 {
     position: absolute;
@@ -80,6 +73,7 @@ main
 #results
 {
     display: none;
+    opacity: 0;
 }
 
 #results p 
@@ -140,7 +134,8 @@ button:disabled
     pointer-events: none;
 }
 
-.category {
+.category 
+{
     display: none;
     margin-top: 30px;
     justify-content: center;
@@ -181,8 +176,7 @@ button:disabled
 
 input
 {
-    font-size: 18px; /* You can adjust the size to your preference */
-    /* Add any other styles you need */
+    font-size: 18px;
 }
 
 input:read-only 
@@ -267,6 +261,11 @@ input:read-only
 }
 
 .display-control
+{
+    display: none;
+}
+
+.display-buttons
 {
     display: none;
 }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/templates/headerStyle.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            color: #009688;
+        }
+
+        button 
+        {
+            background-color: #880808;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 0px 10px 0px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    </style>
+    <title>Saved Products</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/home">
+                    techinEZ
+                </a>
+            </div>
+            <ul>
+                <li class="nav-text"><a href="/home">Home</a></li>
+                <li>|</li>
+                <li class="nav-text"><a href="/finder">Use tech finder</a></li>
+                <li>|</li>
+                <li class="nav-text"><a href="/compare">Compare tech</a></li>
+                <li>|</li>
+                <li class="nav-text"><a href="/login">Account</a></li>
+                <li>|</li>
+                <li class="nav-text"><a href="/about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <ul id="product-list">
+            <!-- Saved product links will be added here dynamically -->
+        </ul>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const productList = document.getElementById("product-list");
+
+            // Add saved product links dynamically (you can replace these with actual saved links)
+            addProductLink("Product 1", "https://example.com/product1");
+            addProductLink("Product 2", "https://example.com/product2");
+            addProductLink("Product 3", "https://example.com/product3");
+
+            function addProductLink(productName, productLink) {
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `
+                    <a href="${productLink}" target="_blank">${productName}</a>
+                    <button class="remove-btn" onclick="removeProduct(this)">Remove</button>
+                `;
+                productList.appendChild(listItem);
+            }
+
+            window.removeProduct = function (button) {
+                const listItem = button.parentElement;
+                productList.removeChild(listItem);
+            };
+        });
+    </script>
+
+</body>
+</html>
