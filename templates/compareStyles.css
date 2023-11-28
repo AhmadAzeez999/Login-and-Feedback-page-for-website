@@ -1,52 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body {
+body 
+{
     margin: 0;
     padding: 0;
     background-color: #fff;
     font-family: 'Roboto', sans-serif;
 }
 
-h1 {
+h1 
+{
     font-size: 24px;
 }
 
-.title {
+.title 
+{
     text-align: center;
     color: #fff;
     background-color: #880808;
     padding: 10px;
 }
 
-.main {
+.main 
+{
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-.selection {
+.selection 
+{
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.selection label {
+.selection label 
+{
     margin-right: 10px;
 }
 
-.selection select {
+.selection select 
+{
     padding: 5px;
     border: 1px solid #ddd;
     border-radius: 3px;
 }
 
-.product-columns {
+.product-columns 
+{
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
-.product-column {
+.product-column 
+{
     width: 48%;
     border: 1px solid #fff;
     padding: 10px;
@@ -54,38 +63,45 @@ h1 {
     background-color: #fff;
 }
 
-.product-column h3 {
+.product-column h3 
+{
     font-size: 18px;
     margin: 0;
 }
 
-.product-column p {
+.product-column p 
+{
     margin: 5px 0;
 }
 
-.product-column img {
+.product-column img 
+{
     width: 500px;
     height: auto;
     margin: 0 auto 10px;
 }
 
-.comparison table {
+.comparison table 
+{
     width: 100%;
     border-collapse: collapse;
 }
 
-.comparison th, .comparison td {
+.comparison th, .comparison td 
+{
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
 }
 
-.comparison th {
+.comparison th 
+{
     background-color: #880808;
     color: #fff;
 }
 
-.comparison button {
+.comparison button 
+{
     background-color: #880808;
     color: #fff;
     border: none;
@@ -94,6 +110,15 @@ h1 {
     cursor: pointer;
 }
 
-.comparison button:hover {
+.comparison button:hover 
+{
     background-color: #ff0000;
+}
+
+select
+{
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
 }
