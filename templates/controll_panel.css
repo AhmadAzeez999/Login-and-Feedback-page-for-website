@@ -1,6 +1,5 @@
 
-body
-{
+body{
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,8 +8,7 @@ body
     height: 100vh; /* Ensure full viewport height */
 }
 
-.main_box
-{
+.main_box{
     background-color: rgb(76, 12, 12);
     width: 750x;
     color: white;
@@ -18,8 +16,7 @@ body
     flex-direction: column;
     padding: 12px;
 }
-.m_class
-{
+.m_class{ 
     background-color: ivory;
     color: black;
     font-size: 25px;

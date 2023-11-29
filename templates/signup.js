@@ -25,15 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
          if(sent_data.status === 201){
             let resp_data = await sent_data.json();
             mess_display.style.opacity = "1";
+            mess_display.textContent = resp_data.resp;
             setTimeout(function(){
                mess_display.style.opacity = "0";
+               mess_display.textContent = "";
             }, 2000)
-            mess_display.textContent = resp_data.resp;
+            
          }
          else{
-            let res_recv = await resp_data.json();
-         
-            mess_display.textContent = resp_data.resp;
+            let res_recv = await sent_data.json();
+            mess_display.style.opacity = "1";
+            mess_display.textContent = res_recv.resp;
+            setTimeout(function(){
+               mess_display.style.opacity = "0";
+               mess_display.textContent = "";
+            }, 2000)
          }
     })
     

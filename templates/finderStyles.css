@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
 body
 {
-    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     height: 100%;
+}
+
+.dark-mode
+{
+    background-color: #000000;
 }
 
 main
@@ -195,10 +197,12 @@ input:read-only
 
 .store-container img
 {
-    height: 50px;
+    height: 100px;
     padding: 20px 0px 0px 0px;
 }
-
+.m_result{
+    opacity: "0";
+}
 .result-line 
 {
     display: flex;
@@ -243,11 +247,10 @@ input:read-only
 
 .result-line img 
 {
-    width: 150px;
-    height: 240px;
+    width: 250px;
+    height: 250px;
     margin-right: 10px;
     padding-right: 30px;
-    padding-top: 50px;
 }
 
 .product-info 
@@ -268,4 +271,9 @@ input:read-only
 .display-buttons
 {
     display: none;
+}
+
+.product-des
+{
+    font-weight: bold;
 }

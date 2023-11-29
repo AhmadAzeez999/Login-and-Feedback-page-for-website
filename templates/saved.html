@@ -35,7 +35,9 @@
             justify-content: space-between;
             align-items: center;
         }
-
+        li{
+            color: #333;
+        }
         li a {
             color: #333;
             text-decoration: none;
@@ -64,19 +66,15 @@
     <header>
         <nav>
             <div class="logo">
-                <a href="/home">
+                <a href="/">
                     techinEZ
                 </a>
             </div>
             <ul>
-                <li class="nav-text"><a href="/home">Home</a></li>
-                <li>|</li>
+                <li class="nav-text"><a href="/">Home</a></li>
                 <li class="nav-text"><a href="/finder">Use tech finder</a></li>
-                <li>|</li>
                 <li class="nav-text"><a href="/compare">Compare tech</a></li>
-                <li>|</li>
-                <li class="nav-text"><a href="/login">Account</a></li>
-                <li>|</li>
+                <li class="nav-text"><a href="/account">Account</a></li>
                 <li class="nav-text"><a href="/about">About Us</a></li>
             </ul>
         </nav>
@@ -89,27 +87,28 @@
     </main>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", async () => {
             const productList = document.getElementById("product-list");
-
-            // Add saved product links dynamically (you can replace these with actual saved links)
-            addProductLink("Product 1", "https://example.com/product1");
-            addProductLink("Product 2", "https://example.com/product2");
-            addProductLink("Product 3", "https://example.com/product3");
-
-            function addProductLink(productName, productLink) {
-                const listItem = document.createElement("li");
-                listItem.innerHTML = `
-                    <a href="${productLink}" target="_blank">${productName}</a>
-                    <button class="remove-btn" onclick="removeProduct(this)">Remove</button>
-                `;
+            const got_searches = await fetch("http://127.0.0.1:3000/s-save");
+            if(got_searches.status === 200){
+                f_data = await got_searches.json();
+                if(f_data.search_list.length === 0){
+                    const listItem = document.createElement("li");
+                listItem.innerHTML = `There are no saved searches for now`;
                 productList.appendChild(listItem);
+                }
+                else{
+                f_data.search_list.forEach( (element, index) => {
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `<a href="${element.user_link}" target="_blank">Product_${index}</a>`;
+                productList.appendChild(listItem);
+                });
+                }
             }
-
-            window.removeProduct = function (button) {
-                const listItem = button.parentElement;
-                productList.removeChild(listItem);
-            };
+            else{
+                console.log("Not got");
+            }
+        
         });
     </script>
 

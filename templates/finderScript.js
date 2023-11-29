@@ -8,8 +8,6 @@ document.addEventListener("DOMContentLoaded", function ()
     const submitBtn = document.getElementById("btn_sub");
     const addBtn = document.getElementById("btn_add");
 
-    var gameStarted = false;
-
     // Handle the click events for each "Done" button
     for (let i = 1; i <= categories.length + 1; i++) 
     {
@@ -90,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function ()
             {
                 enableScrolling();
             });
-        }, 20000); // wait time
+        }, 24500); // wait time
         
     });
 
@@ -134,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function ()
     });
 
     // For dark mode
-    $('.dark-mode-btn').on('click', function() 
+    $('#dark-mode-btn').on('click', function() 
     {
         $('body').toggleClass('dark-mode');
     });

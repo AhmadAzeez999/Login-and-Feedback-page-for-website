@@ -13,18 +13,19 @@
     <header>
         <nav>
             <div class="logo">
-                <a href="/home">
+                <a href="/">
                     techinEZ
                 </a>
             </div>
+            <button id="dark-mode-btn"> Dark mode button </button>
             <ul>
-                <li class="nav-text"><a href="/home">Home</a></li>
+                <li class="nav-text"><a href="/">Home</a></li>
                 <li>|</li>
                 <li class="nav-text"><a href="/finder">Use tech finder</a></li>
                 <li>|</li>
                 <li class="nav-text"><a href="/compare">Compare tech</a></li>
                 <li>|</li>
-                <li class="nav-text"><a href="/login">Account</a></li>
+                <li class="nav-text"><a href="/account" target="_blank">Account</a></li>
                 <li>|</li>
                 <li class="nav-text"><a href="/about">About Us</a></li>
             </ul>
@@ -54,11 +55,11 @@
                 <div class="category" id="category2">
                     <!-- Category 2 content goes here -->
                     <label for="b_budget">Budget</label>
-                    <input type="text" class="productInput" id="input2" placeholder="Enter your budget (Type 'none' if you don't have a budget)" autocomplete="off" name="b_budget" required>
+                    <input type="text" class="productInput" id="input2" placeholder="Enter your budget (Enter 0 if you don't have a budget)" autocomplete="off" name="b_budget" required>
                     <button id="doneButton2" disabled>Done</button>
                 </div>
                 <div class="form-buttons display-buttons">
-                    <button type="submit" id="btn_sub" class="bt">Submit</button>
+                    <button  id="btn_sub" class="bt">Submit</button>
                     <button type="button" class="add-attribute" id="btn_add"> &plus; Add attribute</button>
                     <div id="tooltip" class="tooltip">
                         <p>To add specifications for a more specific result <br> (5 specs MAX)</p>
@@ -66,7 +67,7 @@
                 </div>
             </form>
 
-            <div id="results" style="display: none;">
+            <div id="results" class="m_result">
 
                 <div class="store-container" id="bestbuy-container">
                     <img src="/templates/Bestbuy logo.png" alt="Website Logo">
@@ -74,22 +75,17 @@
                 </div>
 
                 <div class="store-container" id="ebay-container">
-                    <img src="/templates/Bestbuy logo.png" alt="Website Logo">
+                    <img src="/templates/ebay_logo.png" alt="Website Logo">
                 </div>
 
                 <div class="store-container" id="amazon-container">
-                    <img src="/templates/Bestbuy logo.png" alt="Website Logo">
+                    <img src="/templates/Amazon_logo.png" alt="Website Logo">
                 </div>
-
-                
-
-                
-
 
                 <button onclick="window.location.reload()">Search again</button>
 
                 <h2> Are you satisfied with the results?</h2>
-                <a href="/feedback"> Give us your feedback </a>
+                <a href="/contact"> Give us your feedback </a>
                 
             </div>
         </div>
