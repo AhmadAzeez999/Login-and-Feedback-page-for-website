@@ -3,6 +3,8 @@ let user_model = require('./tech_user_model');
 const bcrypt = require('bcryptjs');
 var nodemailer = require('nodemailer');
 const feed_modal = require("./feedback_model");
+const link_saver = require('./save-search-model');
+
 exports.signup_form = async (req, res) => {
     try{
             res.sendFile(__dirname + '/templates/signup.html');
@@ -21,23 +23,28 @@ exports.signup = async (req, res) => {
         const { username, useremail, password, confirmPassword } = req.body;
 
         if (password === undefined || confirmPassword === undefined || password !== confirmPassword) {
-            throw new Error("The password and the confirm password do not match");
+            return res.status(404).json({
+                resp: "Password and confirm password should match"
+            });
         }
 
         let new_password;
         try {
             new_password = await bcrypt.hash(password, 12);
         } catch (err) {
-            throw new Error("Unable to hash the password");
+            throw new Error("Signup failed due to technical issue with the password encryption mechanism, try agian later");
         }
 
         let user_obj = await user_model.create({ username, useremail, password: new_password });
+        if(user_obj){
+            res.status(201).json({
+                resp: "Successfully signed up"
+            });
+        }
+        else{
+           throw new Error("Signup failed due to some technical issue with the database, try again later");
+        }
         
-        res.status(201).json({
-            resp: "Successfully signed up"
-        });
-        
-
     } catch (err) {
         res.status(404).json({
             resp: err.message
@@ -64,7 +71,7 @@ exports.login = async (req, res) => {
         if (password === 'so#cool*admin_935!' && useremail === 'techinez-admin@gmail.com') {
                     req.session.isAuth = true;
                     req.session.email = useremail;
-            res.sendFile(__dirname + '/templates/control_panel.html');
+            res.redirect('/panel');
         } else {
             const found_user = await user_model.findOne({ useremail });
             if (found_user) {
@@ -73,7 +80,9 @@ exports.login = async (req, res) => {
                     req.session.isAuth = true;
                     req.session.user = { "username": found_user.username };
                     req.session.email = { useremail };
-                    res.redirect('/home');
+                    res.status(200).json({
+                       resp: "You have logged in"
+                    });
                 } else {
                     throw new Error("The password is incorrect");
                 }
@@ -82,7 +91,7 @@ exports.login = async (req, res) => {
             }
         }
     } catch (err) {
-        res.status(404).json({
+        res.json({
             resp: err.message
         });
     }
@@ -100,22 +109,22 @@ if(saved_feed){
           pass: 'kpwutwryfhzrfbkf'
         },
       
-      });
-      
+      }); 
       var mailOptions = {
         from: 'jay.d.mistry03@gmail.com',
         to: req.session.email.useremail,
         subject: 'Thankyou',
         text: 'Thankyou so much for your feedback, we will review and make the important changes soon'
-      };
-      
+      };  
       transporter.sendMail(mailOptions, function(error, info){
         if (error) {
-          console.log(error);
+            res.status(200).json({
+                resp:"Your feedback has been collected, thank you so much!"
+            });
         } else {
           res.status(200).json({
               resp:"Your feedback has been collected, thank you so much!"
-          })
+          });
         }
       });
       
@@ -127,7 +136,6 @@ else{
 }
 }
 
-
 exports.get_dashboard = async (req, res) => {
     try{
         res.sendFile(__dirname + '/templates/index.html');
@@ -138,23 +146,9 @@ exports.get_dashboard = async (req, res) => {
             })
         }
 }
-
 exports.get_finder = async (req, res) => {
     try{
         res.sendFile(__dirname + '/templates/finder.html');
-        }
-        catch(err){
-            res.status(404).json({
-                resp: "Some error occured: " + err.message
-            })
-        }
-}
-
-
-exports.get_feedback = async (req, res) => {
-
-    try{
-        res.sendFile(__dirname + '/templates/feedback.html');
         }
         catch(err){
             res.status(404).json({
@@ -198,16 +192,62 @@ exports.get_compare = async (req, res) => {
         }
 }
 
-exports.ad_check = async (req, res, next) => {
-    if(req.session.email === "techinez-admin@gmail.com"){
-        next();
+
+
+exports.return_cred = async(req,res) => {
+    const user_name = req.session.user.username;
+    if(user_name){
+        res.status(200).json({
+            resp: user_name
+        })
+    }
+}
+
+
+
+exports.check_is_admin = async (req,res, next) => {
+    try{
+        if(req.session.email === 'techinez-admin@gmail.com'){
+            next();
+     
+        }
+        else{
+           res.status(403).json({
+                resp: "You are not allowed"
+            });
+        }
+    }
+    catch(err){
+        res.status(404).json({
+            resp: "You are not allowed"
+        });
+    }
+}
+
+
+exports.save_link = async (req,res) => {
+    try{
+    const {link} = req.body;
+    const u_e = req.session.email.useremail;
+    const save_l = await link_saver.create({ user_email: u_e ,user_link: link});
+    if(save_l){
+        res.status(200).json({
+        resp: "saved"
+            });
     }
     else{
-        res.status.json({
-            resp: "Unauthorized"
-        })
-    };
+        res.status(404).json({
+            resp: 'Some error'
+        });
+    }
 }
+catch(e){
+    res.status(404).json({
+        resp: 'Some error'
+    });
+}
+}
+
 exports.return_feed = async (req,res) => {
     const feed = await feed_modal.find();
     if(feed){
@@ -227,10 +267,21 @@ exports.authenticated = async (req,res,next) => {
         next();
     }
     else{
-        res.redirect('/login');
+        res.redirect('/account');
     }
 }
 
+exports.send_panel = async(req,res)=> {
+    try{
+        res.sendFile(__dirname + '/templates/control_panel.html');
+    }
+    catch(err){
+        res.status(404).json({
+            resp: "Some error in sending the file"
+        })
+    }
+    
+ }
 exports.get_cred = async (req,res) => {
       const curr_data = req.session.user.username;
       if(curr_data){
@@ -245,4 +296,43 @@ exports.get_cred = async (req,res) => {
       }
 }
 
+exports.send_saved_searche_html = async (req,res) => {
+    try{
+        res.sendFile(__dirname + "/templates/saved.html");
+      
+    }
+    catch(e){
+        res.status(404).json({
+            resp: "Could not find file"
+        });
+    }
+}
+exports.send_saved_searche_html = async (req,res) => {
+    try{
+        res.sendFile(__dirname + "/templates/saved.html");
+      
+    }
+    catch(e){
+        res.status(404).json({
+            resp: "Could not find file"
+        });
+    }
+}
+exports.send_searches = async (req,res) => {
+    const u_e = req.session.email.useremail;
+    
+    const s_list = await link_saver.find({user_email:u_e});
+    if(s_list){
+        res.status(200).json({
+            search_list: s_list
+        });
+    }
+    else{
+        res.status(404).json({
+            resp: "List was not found"
+        });
+    }
+  
+    
+}
 
