@@ -84,6 +84,7 @@ nav a:hover
     padding: 0;
     margin: 0;
     padding-right: 30px;
+    border: none;
 }
 
 #dark-mode-btn img
