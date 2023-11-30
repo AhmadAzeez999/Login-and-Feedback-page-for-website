@@ -33,7 +33,7 @@ nav ul
 {
     list-style: none;
     display: flex;
-    margin-right: -800px;
+    margin-right: 60px;
 }
 
 nav li 
@@ -112,3 +112,9 @@ nav a:hover
 {
     display: block;
 }
+
+#dark-mode-btn
+{
+    cursor: pointer;
+}
+

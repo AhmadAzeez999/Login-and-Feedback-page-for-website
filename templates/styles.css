@@ -29,6 +29,21 @@ body, h1, p
     font-weight: bold;
 }
 
+.dark-mode .hero-texts
+{
+    background-color: #ffffff00;
+}
+
+.dark-mode h1
+{
+    background-color: #ffffff00;
+}
+
+.dark-mode p
+{
+    background-color: #ffffff00;
+}
+
 h1 
 {
     font-size: 32px;
