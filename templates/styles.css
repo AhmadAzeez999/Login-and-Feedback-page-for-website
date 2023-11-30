@@ -29,6 +29,12 @@ body, h1, p
     font-weight: bold;
 }
 
+main
+{
+    padding-top: 20px;
+    padding-bottom: 100%;
+}
+
 .dark-mode .hero-texts
 {
     background-color: #ffffff00;
