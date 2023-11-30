@@ -29,12 +29,6 @@ body, h1, p
     font-weight: bold;
 }
 
-main
-{
-    padding-top: 20px;
-    padding-bottom: 100%;
-}
-
 .dark-mode .hero-texts
 {
     background-color: #ffffff00;
@@ -168,6 +162,11 @@ p
 {
     max-width: 500px;
     margin: auto;
+}
+
+.aboutUsSection p
+{
+    margin-bottom: 20px;
 }
 
 .testimonialSection

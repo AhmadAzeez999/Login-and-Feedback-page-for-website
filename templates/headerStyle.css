@@ -92,6 +92,12 @@ nav a:hover
     width: 50px;
 }
 
+.dark-mode
+{
+    background-color: #000000;
+    color: #fff;
+}
+
 .dark-mode *
 {
     background-color: #000000;
