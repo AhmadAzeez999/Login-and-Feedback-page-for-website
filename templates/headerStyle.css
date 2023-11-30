@@ -17,13 +17,15 @@ header
     padding-left: 50px;
 }
 
-header nav {
+header nav 
+{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
+.logo 
+{
     font-size: 24px;
 }
 
@@ -31,6 +33,7 @@ nav ul
 {
     list-style: none;
     display: flex;
+    margin-right: -800px;
 }
 
 nav li 
@@ -60,4 +63,51 @@ nav a:hover
 {
     text-decoration: none;
     color: #880808;
+}
+
+#dark-btn
+{
+    display: block;
+}
+
+#light-btn
+{
+    display: none;
+}
+
+#dark-mode-btn
+{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    padding-right: 30px;
+}
+
+#dark-mode-btn img
+{
+    width: 50px;
+}
+
+.dark-mode *
+{
+    background-color: #000000;
+    color: #fff;
+}
+
+.dark-mode #dark-mode-btn
+{
+    background-color: #000000;
+}
+
+.dark-mode #dark-btn
+{
+    display: none;
+}
+
+.dark-mode #light-btn
+{
+    display: block;
 }
