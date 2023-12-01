@@ -136,6 +136,12 @@ document.addEventListener("DOMContentLoaded", function ()
         $("body").css("overflow", "auto");
     }
 
+    // jQuery for the dropdown functionality
+    $('.collapse-btn').click(function () 
+    {
+        $(this).parent('.store-container').toggleClass('collapsed');
+    });
+
     // Game script
     const robot = document.getElementById('robot');
     const gameContainer = document.getElementById('game-container');

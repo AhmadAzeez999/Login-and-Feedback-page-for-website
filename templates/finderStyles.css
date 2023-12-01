@@ -188,6 +188,18 @@ input:read-only
     height: auto;
     background-color: #fff;
     margin-top: 20px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.collapse-btn 
+{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: transform 0.3s;
 }
 
 .store-container img
@@ -195,7 +207,9 @@ input:read-only
     height: 100px;
     padding: 20px 0px 0px 0px;
 }
-.m_result{
+
+.m_result
+{
     opacity: "0";
 }
 .result-line 
@@ -209,6 +223,16 @@ input:read-only
     margin-top: 50px;
     background-color: #fff;
     font-size: 24px;
+}
+
+.collapsed .result-line 
+{
+    display: none;
+}
+
+.collapsed .collapse-btn 
+{
+    transform: translateY(-50%) rotate(180deg);
 }
 
 .result-line a
